@@ -20,7 +20,7 @@
          </p>
         <p>
         <img src="images/bag.png" height="80px" width="80px">
-          <span style="color:black;size:25px" id='plused'>4511.3g</span>
+          <span  id='plused'>4511.3g</span>
         </p>
 
         <div id="aaa"></div>
@@ -31,7 +31,7 @@
           </p>
           <p>
         <img src="images/water.png" height="80px" width="80px">
-       <span style="color:black;size:25px" id='waterused'>1991.5 litres</span>
+       <span  id='waterused'>1991.5 litres</span>
         </p>
         
        <p style="color:black; size:15px;">
@@ -40,7 +40,7 @@
          </p>
         <p>
         <img src="images/trees.png" height="80px" width="80px">
-       <span style="color:black;size:25px" id='treescut'>3.61 trees</span>
+       <span  id='treescut'>3.61 trees</span>
      </p>
        
        <p style="color:black;size:15px;">
@@ -49,7 +49,7 @@
          </p>
         <p>
           <img src="images/truck.png" height="80px" width="80px">
-          <span style="color:black;size:25px" id='cemmissions'>208.8kg</span>
+          <span  id='cemmissions'>208.8kg</span>
       </p>
       
       <p style="color:black;size:15px;">
@@ -58,13 +58,15 @@
        </p>
       <p>
         <img src="images/materials.png" height="80px" width="80px">
-        <span style="color:black;size:25px" id='matrating'>7/10</span>
+        <span  id='matrating'>7/10</span>
       </p>
-      <button type="button">
+      <button type="button" onclick="addlist();">
          Add to comparison list</button>
-      <button onclick="location.href='Complist.html'" type="button">
-         Open comparison list</button>
+      <a href="Complist.html" target="_blank">
       <button type="button">
+         Open comparison list</button>
+      </a>
+      <button type="button" onclick="resetvals();">
          Clear comparison list</button>
       
   </div>
