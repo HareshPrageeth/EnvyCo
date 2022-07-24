@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+
+    <link rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.css">    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=" crossorigin="anonymous" />   
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>    
+
+    <title>
+         EnvyCo Comparison
+    </title>
+  </head>
+
+  <style>
+    .topbar {
+    margin: 0;
+    padding: 0;
+    width: 100;
+    overflow: hidden;
+    font-size: 350%;
+    background-color: rgb(14, 1, 1);  
+    }
+  </style>
+  
+  <body>     
+        <h6 class="topbar" style="float: centre;display: block; color: rgb(211, 193, 195); text-align: center; padding: 25px 25px; " >EnvyCo Comparison List</h6>    
+        <br><br>     
+    
+        <div  style="position: relative; height:50vh; width:50vw; margin: auto;" >                
+            <canvas id="myChart" ></canvas><br>
+            <canvas id="myChart1" ></canvas><br>
+            <canvas id="myChart2" ></canvas><br>
+            <canvas id="myChart3" ></canvas><br>
+            <canvas id="myChart4" ></canvas><br>
+            <div style="padding-bottom:40px;  " >
+            <h1 id = "bestproduct" , style=" width:100%; text-align: center; font-size: 250%;background-color: rgb(236, 164, 164); ">
+            </div>
+            </h1>
+        </div>  
+  </body>
+
+
+  <script>
+    const WaterUsed = [1991.5,2521.8,2200];
+    const ProdNames = ["Cello Bottle","Stewit Bottle","Treo Bottle"];
+    var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+        type: 'bar',        
+        data: {
+            
+            labels: ProdNames,
+            datasets: [{
+                label:'Water Used',
+                data: WaterUsed,
+                backgroundColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)'
+                    
+            
+                ],
+                
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+
+
+
+
+
+
+    const PlasticUsed = [4511.3,4019.5,3577.6];
+    var ctx = document.getElementById('myChart1').getContext('2d');
+        var myChart1 = new Chart(ctx, {
+        type: 'bar',        
+        data: {
+            
+            labels: ProdNames,
+            datasets: [{
+                label:'Plastic Used',
+                data: PlasticUsed,
+                backgroundColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)'
+                    
+            
+                ],
+                
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+
+
+    const TreesCut = [3.61,2.92,3.01];
+    var ctx = document.getElementById('myChart2').getContext('2d');
+        var myChart2 = new Chart(ctx, {
+        type: 'bar',        
+        data: {
+            
+            labels: ProdNames, 
+            datasets: [{
+                label:'Trees Cut',
+                data: TreesCut,
+                backgroundColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)'
+                    
+            
+                ],
+                
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+
+    const CarbonEmission = [208.8,210.3,195.8];
+    var ctx = document.getElementById('myChart3').getContext('2d');
+        var myChart3 = new Chart(ctx, {
+        type: 'bar',        
+        data: {
+            
+            labels: ProdNames,
+            datasets: [{
+                label:'Carbon Emissions',
+                data: CarbonEmission,
+                backgroundColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)'
+                    
+            
+                ],
+                
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+
+    const FinalRank = [3,2,1];
+    var ctx = document.getElementById('myChart4').getContext('2d');
+        var myChart4 = new Chart(ctx, {
+        type: 'bar',        
+        data: {
+            
+            labels: ProdNames,
+            datasets: [{
+                label:'Final Rank of Sustainibility',
+                data: FinalRank,
+                backgroundColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)'
+                    
+            
+                ],
+                
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+
+    var maxval = Math.max(...FinalRank);
+
+var ind = FinalRank.indexOf(maxval);
+
+var BestProd = ProdNames[ind];
+document.getElementById("bestproduct").innerHTML = BestProd + ' is the product we reccomend!';
+</script>
+
+</html>
+

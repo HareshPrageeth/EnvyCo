@@ -1,0 +1,26 @@
+{
+   "name": "EnvyCo",
+   "description": "Environment friendly comparisons. Go green with EnvyCo.",
+   "version": "1",
+   "manifest_version":3,
+   "icons": {
+    "16": "images/icon128.png",  
+    "32": "images/icon128.png",
+    "64": "images/icon128.png",
+    "128": "images/icon128.png"
+	},
+
+   "action": {
+     "default_popup":"Extension.html"
+	},
+   "content_scripts":[
+	  { 
+	  "matches":["https://amazon.in/*"],
+		"js": ["sccript.js"]
+
+
+	  }
+	], 
+  "permissions": ["tabs","storage"],
+  "host_permissions": ["https://amazon.in/*"]
+}
